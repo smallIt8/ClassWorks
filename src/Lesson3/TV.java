@@ -1,4 +1,4 @@
-package core.Lesson3;
+package src.Lesson3;
 
 public class TV {
 

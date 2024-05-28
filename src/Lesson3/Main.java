@@ -1,4 +1,6 @@
-package core.Lesson3;
+package src.Lesson3;
+
+import java.util.Scanner;
 
 public class Main {
     private static int x;
