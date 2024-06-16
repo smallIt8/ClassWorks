@@ -1,4 +1,4 @@
-package src.Lesson4;
+package src.lesson4;
 
 public class Mas {
 

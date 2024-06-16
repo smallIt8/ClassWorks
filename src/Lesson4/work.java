@@ -1,6 +1,6 @@
-package src.Lesson4;
+package src.lesson4;
 
-public class work {
+public class Work {
 
     public static void main(String[] args) {
         int[] arr = new int[10];
