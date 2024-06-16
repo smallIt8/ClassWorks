@@ -1,4 +1,4 @@
-package src.Lesson6;
+package src.lesson6;
 
 public class Counter {
 
