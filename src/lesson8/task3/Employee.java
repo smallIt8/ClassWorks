@@ -11,16 +11,43 @@ package src.lesson8.task3;
 
 public class Employee {
 
-    String fullName;
-    double salary;
+    private String fullName;
+    private double salary;
 
     public void start(){
         array();
     }
 
-    public void array (){
+    public Employee() {
+    }
 
+    public Employee(String fullName, double salary) {
+        this.fullName = fullName;
+        this.salary = salary;
+    }
 
+    public Object array(){
+        Employee[] person = {
+                new Employee("Сидоров А.В.",1050.54),
+                new Employee("Петров П.С.", 1537.12),
+                new Employee("Васичкин Л.Е", 1234.75)
+        };
+        return "";
+    }
 
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
     }
 }
