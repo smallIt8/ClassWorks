@@ -1,34 +1,91 @@
 package src.lesson8.task4;
 
-//       Класс Phone.
-//- Создайте класс Phone, который содержит переменные number, model и weight.
-//- Создайте три экземпляра этого класса.
-//- Выведите на консоль значения их переменных.
-//- Добавить в класс Phone методы: receiveCall, имеет один параметр – имя звонящего.
-//  Выводит на консоль сообщение “Звонит {name}”. Метод getNumber – возвращает номер телефона. Вызвать эти методы для каждого из объектов.
-//- Добавить конструктор в класс Phone, который принимает на вход три параметра для инициализации переменных класса - number, model и weight.
-//- Добавить конструктор, который принимает на вход два параметра для инициализации переменных класса - number, model.
-//- Добавить конструктор без параметров.
-//- Вызвать из конструктора с тремя параметрами конструктор с двумя.
-//- Добавьте перегруженный метод receiveCall, который принимает два параметра - имя звонящего и номер телефона звонящего. Вызвать этот метод.
-//- Создать метод sendMessage с аргументами переменной длины. Данный метод принимает на вход номера телефонов, которым будет отправлено сообщение.
-//  Метод выводит на консоль номера этих телефонов.
-
-
-
 public class Phone {
-
-    String fullName;
-    double salary;
+    private String number;
+    private String model;
+    private int weight;
 
     public void start(){
-        array();
+        createPhonesAndPrint();
     }
 
-    public void array (){
-
-
-
+    public Phone() {
     }
 
+    public Phone(String number, String model) {
+        this.number = number;
+        this.model = model;
+    }
+
+    public Phone(String number, String model, int weight) {
+        this(number, model);
+        this.weight = weight;
+    }
+
+    public static void createPhonesAndPrint (){
+        Phone phone1 = new Phone("+375251112233", "Xiaomi Mi 13 Ultra", 189);
+        Phone phone2 = new Phone("+375294445566", "Samsung Galaxy S22 Ultra", 211);
+        Phone phone3 = new Phone("+375337778899", "IPhone 15 Pro Max", 178);
+        Phone[] phones = new Phone[]{phone1, phone2, phone3};
+        System.out.println("Информация о телефонах:");
+        System.out.printf("%-15s | %-25s | %-10s%n", "Номер телефона", "Модель телефона", "Вес телефона");
+        for (Phone phone : phones) {
+            System.out.printf("%-15s | %-25s | %-10s%n", phone.getNumber(), phone.getModel(), phone.getWeight());
+        }
+
+        System.out.println(" ");
+
+        phone1.receiveCall("Илья " + phone1.getNumber());
+        phone2.receiveCall("Саша " + phone2.getNumber());
+        phone3.receiveCall("Наташа " + phone3.getNumber());
+
+        System.out.println(" ");
+
+        phone1.receiveCall("Илья", "+375251112233");
+        phone2.receiveCall("Саша", "+375294445566");
+        phone3.receiveCall("Наташа", "+375337778899");
+
+        System.out.println(" ");
+
+        sendMessage("+375251112233", "+375294445566", "+375337778899");
+    }
+
+    public static void receiveCall(String name){
+        System.out.println("Звонит: " + name);
+    }
+
+    public static void receiveCall(String name, String phoneNumber) {
+        System.out.println("Звонит: " + name + " " + phoneNumber);
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public static void sendMessage(String... phoneNumbers) {
+        System.out.println("Отправка сообщения на номера телефонов:");
+        for (String phoneNumber : phoneNumbers) {
+            System.out.println(phoneNumber);
+        }
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
 }

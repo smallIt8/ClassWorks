@@ -2,15 +2,11 @@ package src.lesson8.task3;
 
 public class Report {
 
-    public String generateReport() {
-
+    public static void generateReport(Employee[] persons) {
         System.out.println("Отчет о зарплате сотрудников:");
-        System.out.println("-----------------------------------");
-        for (Employee employee : ) {
-            // Форматирование строки для вывода информации о сотруднике
-            System.out.printf("%-20s %10.2f%n", employee.fullName, employee.salary);
+        System.out.printf("%-30s | %30s%n", "Полное имя", "Заработная плата");
+        for (Employee employee : persons) {
+            System.out.printf("%-30s | %30.2f%n", employee.getFullName(), employee.getSalary());
         }
-        System.out.println("-----------------------------------");
-        return "";
     }
 }

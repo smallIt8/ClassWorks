@@ -2,7 +2,7 @@ package src.lesson8.task1;
 
 import java.util.Scanner;
 
-public class Task1 {
+public class DayWeek {
 
     Scanner scanner = new Scanner(System.in);
     private int w;

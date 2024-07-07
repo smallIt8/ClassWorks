@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(java.lang.String[] args) {
 
-        Task2 string = new Task2();
+        String string = new String();
         string.start ();
     }
 }

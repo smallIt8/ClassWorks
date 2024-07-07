@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Employee string = new Employee();
-        string.start ();
+        Employee employee = new Employee();
+        employee.start ();
     }
 }

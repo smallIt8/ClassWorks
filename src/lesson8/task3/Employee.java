@@ -1,21 +1,14 @@
 package src.lesson8.task3;
 
-//Отчет о сотрудниках, часть 1
-//- Создать класс Employee, у которого есть переменные класса - fullName, salary.
-//- Создать массив содержащий несколько объектов этого типа.
-//- Создать класс Report со статическим методом generateReport, в котором выводится информация о зарплате всех сотрудников.
-//- Используйте форматирование строк. Пусть salary будет выровнено по правому краю,
-// десятичное значение имеет 2 знака после запятой и можете добавить что-нибудь свое.
-
-
-
 public class Employee {
 
     private String fullName;
     private double salary;
+    private Employee[] persons;
 
     public void start(){
-        array();
+        createEmployee();
+        Report.generateReport(persons);
     }
 
     public Employee() {
@@ -26,13 +19,12 @@ public class Employee {
         this.salary = salary;
     }
 
-    public Object array(){
-        Employee[] person = {
+    public void createEmployee(){
+        persons = new Employee[]{
                 new Employee("Сидоров А.В.",1050.54),
                 new Employee("Петров П.С.", 1537.12),
                 new Employee("Васичкин Л.Е", 1234.75)
         };
-        return "";
     }
 
     public String getFullName() {
