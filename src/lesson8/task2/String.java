@@ -1,13 +1,13 @@
 package src.lesson8.task2;
 
-public class Task2 {
+public class String {
 
     public void start(){
         textString();
     }
 
     public void textString (){
-        String text = "I like Java!!!";
+        java.lang.String text = "I like Java!!!";
         System.out.println("Выводим последний символ строки text: " + text.charAt(text.length() - 1));
         if ( text.endsWith("!!!") ) {
             System.out.println("Да, строка text заканчивается подстрокой '!!!'");
